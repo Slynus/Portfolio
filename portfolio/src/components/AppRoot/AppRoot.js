@@ -1,8 +1,9 @@
 import React from 'react';
-import { CssBaseline } from '@material-ui/core';
+import { CssBaseline, Container } from '@material-ui/core';
 import { createMuiTheme, ThemeProvider, responsiveFontSizes } from '@material-ui/core/styles';
 
 import './AppRoot.css';
+import PortfolioWrapper from '../PortfolioWrapper/PortfolioWrapper';
 
 let theme = createMuiTheme({
   typography: {
@@ -23,9 +24,11 @@ function AppRoot() {
     <React.Fragment>
       <ThemeProvider theme={theme}>
         <CssBaseline />
-        <h1>Hello world</h1>
-        {/* <WebsiteWrapper /> */}
-      </ThemeProvider>
+        <Container maxWidth="lg">
+        <PortfolioWrapper />
+      
+        </Container>
+        </ThemeProvider>
     </React.Fragment>
   );
 }
